@@ -25,6 +25,3 @@ Add `pod 'FSnapChatLoading'` to your Podfile
 
     `loadingView.hide()`
     
-    
-# Demo
-In this repository you can also find a demo.
