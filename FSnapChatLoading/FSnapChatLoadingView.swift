@@ -13,7 +13,7 @@ public class FSnapChatLoadingView: UIView {
 
     var overlayView:UIView!
     
-    public func show(view:UIView?,color:UIColor) {
+    public func show(view:UIView?,color:UIColor = UIColor.red) {
        self.frame = view!.frame
        self.backgroundColor = UIColor.clear
        overlayView = UIView()
@@ -21,7 +21,7 @@ public class FSnapChatLoadingView: UIView {
        overlayView.backgroundColor = #colorLiteral(red: 0.4221526015, green: 0.4221526015, blue: 0.4221526015, alpha: 0.4056881421)
         
        let loading = FSLoading(frame: CGRect(x: view!.center.x - 50, y: view!.center.y - 50, width: 100, height: 100))
-        loading.setup(color: #colorLiteral(red: 1, green: 0.9663620082, blue: 0.1761264567, alpha: 1))
+        loading.setup(color: color)
         overlayView.addSubview(loading)
         
        view!.addSubview(overlayView)
