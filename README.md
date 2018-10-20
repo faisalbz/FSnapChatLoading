@@ -27,4 +27,8 @@ Run `pod install`
 
     `loadingView.hide()`
     
+# Options
 
+`loadingView.setColorBackground(color: .clear)`
+
+`loadingView.setBackgroundBlurEffect()`
