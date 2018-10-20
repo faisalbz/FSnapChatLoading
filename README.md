@@ -10,6 +10,8 @@ A loading tool similar to that in Snap Chat
 # Setup
 Add `pod 'FSnapChatLoading'` to your Podfile
 
+Run `pod install`
+
 # How to use
 1. Create an instance of `FSnapChatLoadingView`
 
