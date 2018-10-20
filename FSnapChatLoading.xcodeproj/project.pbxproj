@@ -11,7 +11,7 @@
 		040F622B217AD35F00CA5BD2 /* FSnapChatLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F622A217AD35F00CA5BD2 /* FSnapChatLoadingTests.swift */; };
 		040F622D217AD35F00CA5BD2 /* FSnapChatLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = 040F621F217AD35E00CA5BD2 /* FSnapChatLoading.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		040F6238217AD38600CA5BD2 /* FSLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F6236217AD38600CA5BD2 /* FSLoading.swift */; };
-		040F6239217AD38600CA5BD2 /* FSnapChatLoading View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F6237217AD38600CA5BD2 /* FSnapChatLoading View.swift */; };
+		040F6239217AD38600CA5BD2 /* FSnapChatLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F6237217AD38600CA5BD2 /* FSnapChatLoadingView.swift */; };
 		040F6276217AF06D00CA5BD2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 040F6274217AF06D00CA5BD2 /* Podfile */; };
 		040F6277217AF06D00CA5BD2 /* FSnapChatLoading.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 040F6275217AF06D00CA5BD2 /* FSnapChatLoading.podspec */; };
 /* End PBXBuildFile section */
@@ -34,7 +34,7 @@
 		040F622A217AD35F00CA5BD2 /* FSnapChatLoadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSnapChatLoadingTests.swift; sourceTree = "<group>"; };
 		040F622C217AD35F00CA5BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		040F6236217AD38600CA5BD2 /* FSLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSLoading.swift; sourceTree = "<group>"; };
-		040F6237217AD38600CA5BD2 /* FSnapChatLoading View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FSnapChatLoading View.swift"; sourceTree = "<group>"; };
+		040F6237217AD38600CA5BD2 /* FSnapChatLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSnapChatLoadingView.swift; sourceTree = "<group>"; };
 		040F6274217AF06D00CA5BD2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		040F6275217AF06D00CA5BD2 /* FSnapChatLoading.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FSnapChatLoading.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,7 +83,7 @@
 			children = (
 				040F621F217AD35E00CA5BD2 /* FSnapChatLoading.h */,
 				040F6236217AD38600CA5BD2 /* FSLoading.swift */,
-				040F6237217AD38600CA5BD2 /* FSnapChatLoading View.swift */,
+				040F6237217AD38600CA5BD2 /* FSnapChatLoadingView.swift */,
 				040F6220217AD35E00CA5BD2 /* Info.plist */,
 			);
 			path = FSnapChatLoading;
@@ -209,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040F6239217AD38600CA5BD2 /* FSnapChatLoading View.swift in Sources */,
+				040F6239217AD38600CA5BD2 /* FSnapChatLoadingView.swift in Sources */,
 				040F6238217AD38600CA5BD2 /* FSLoading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
