@@ -40,7 +40,9 @@ public class FSnapChatLoadingView: UIView {
     }
     
     public func hide() {
+        if overlayView != nil {
         overlayView.removeFromSuperview()
+        }
     }
     
     public func setColorBackground(color:UIColor){
