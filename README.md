@@ -40,4 +40,4 @@ Faisal AL-Otaibi, @faisal_bz
 
 ## License
 
-Snapshooter is available under the MIT license. See the LICENSE file for more info.
+FSnapChatLoading is available under the MIT license. See the LICENSE file for more info.
