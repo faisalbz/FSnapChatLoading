@@ -86,7 +86,6 @@ class FSLoading: UIView {
         
         layerView.path = path.cgPath
         layerView.fillColor = UIColor.clear.cgColor
-        layerView.lineCap = .round
         layerView.lineWidth = 3
         layerView.strokeColor = color.cgColor
         view.layer.addSublayer(layerView)
