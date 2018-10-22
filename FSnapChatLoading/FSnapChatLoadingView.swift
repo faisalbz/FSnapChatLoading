@@ -1,7 +1,5 @@
 //
 //  FSLoadingView.swift
-//  rotationView
-//
 //  Created by Mac on ١٩‏/١٠‏/٢٠١٨.
 //  Copyright © ٢٠١٨ Faisal AL-Otaibi. All rights reserved.
 //
