@@ -8,10 +8,11 @@ import UIKit
 
 class FSLoading: UIView {
     
-
-    public var color:UIColor = UIColor.red
     
-
+    public var color:UIColor = UIColor.red
+    public var lineWidth:CGFloat = 3
+    public var duration:Double = 1
+    
     lazy var bView: UIView = {
         let bView = UIView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         bView.backgroundColor = UIColor.clear
@@ -19,7 +20,7 @@ class FSLoading: UIView {
         setLayer(view: bView)
         return bView
     }()
-
+    
     
     lazy var sView: UIView = {
         let sView = UIView(frame: CGRect(x: 10, y: 10, width: frame.width - 20, height: frame.height - 20))
@@ -50,11 +51,11 @@ class FSLoading: UIView {
     func setAnimation(view:UIView,isReturn:Bool) {
         let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         if isReturn {
-        rotation.toValue = -Double.pi * 2
+            rotation.toValue = -Double.pi * 2
         }else{
-         rotation.toValue = Double.pi * 2
+            rotation.toValue = Double.pi * 2
         }
-        rotation.duration = 0.8
+        rotation.duration = duration
         rotation.isCumulative = true
         rotation.repeatCount = Float.greatestFiniteMagnitude
         view.layer.add(rotation, forKey: "rotationAnimation")
@@ -84,7 +85,7 @@ class FSLoading: UIView {
         
         layerView.path = path.cgPath
         layerView.fillColor = UIColor.clear.cgColor
-        layerView.lineWidth = 3
+        layerView.lineWidth = lineWidth
         layerView.strokeColor = color.cgColor
         view.layer.addSublayer(layerView)
         

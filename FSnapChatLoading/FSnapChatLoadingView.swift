@@ -6,21 +6,30 @@
 
 import UIKit
 
-public class FSnapChatLoadingView: UIView {
+public enum LoadingType {
+    case large
+    case small
+}
 
-
+open class FSnapChatLoadingView: UIView {
+    
+    
     var overlayView:UIView!
     
-    var colorBackground:UIColor = #colorLiteral(red: 0.4221526015, green: 0.4221526015, blue: 0.4221526015, alpha: 0.4056881421)
+    public var colorBackground:UIColor = .clear
     
-    var isBlurEffect = false
+    public var isBlurEffect = true
+    
+    public var loadingType: LoadingType = .large
+    
+    public var duration:Double = 1
     
     public func show(view:UIView?,color:UIColor = UIColor.red) {
-       self.frame = view!.frame
-       self.backgroundColor = UIColor.clear
-       overlayView = UIView()
-       overlayView.frame = view!.frame
-       overlayView.backgroundColor = colorBackground
+        self.frame = view!.frame
+        self.backgroundColor = UIColor.clear
+        overlayView = UIView()
+        overlayView.frame = view!.frame
+        overlayView.backgroundColor = colorBackground
         
         if isBlurEffect {
             let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
@@ -30,16 +39,30 @@ public class FSnapChatLoadingView: UIView {
             overlayView.addSubview(blurEffectView)
         }
         
-       let loading = FSLoading(frame: CGRect(x: view!.center.x - 50, y: view!.center.y - 50, width: 100, height: 100))
+        var size:CGFloat = 90
+        var lineWidth:CGFloat = 3
+        
+        switch loadingType {
+        case .large:
+            size = 90
+            lineWidth = 3
+        case .small:
+            size = 75
+            lineWidth = 2
+        }
+        
+        let loading = FSLoading(frame: CGRect(x: view!.center.x - (size/2), y: view!.center.y - (size/2), width: size, height: size))
+        loading.duration = duration
+        loading.lineWidth = lineWidth
         loading.setup(color: color)
         overlayView.addSubview(loading)
         
-       view!.addSubview(overlayView)
+        view!.addSubview(overlayView)
     }
     
     public func hide() {
         if overlayView != nil {
-        overlayView.removeFromSuperview()
+            overlayView.removeFromSuperview()
         }
     }
     
@@ -50,5 +73,5 @@ public class FSnapChatLoadingView: UIView {
     public func setBackgroundBlurEffect(){
         isBlurEffect = true
     }
-
+    
 }
