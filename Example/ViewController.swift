@@ -19,11 +19,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func show(_ sender: Any) {
-        loading.setColorBackground(color: .clear)
-        loading.setBackgroundBlurEffect()
+        
+       // loading.colorBackground = .red
+       // loading.loadingType = .small
+       // loading.duration = 0.8
+       // loading.isBlurEffect = false
+        
         loading.show(view: view,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         
-        self.perform(#selector(hide), with: nil, afterDelay: 3)
+        self.perform(#selector(hide), with: nil, afterDelay: 5)
     }
     
 
