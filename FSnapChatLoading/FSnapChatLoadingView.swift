@@ -62,7 +62,9 @@ open class FSnapChatLoadingView: UIView {
     
     public func hide() {
         if overlayView != nil {
-            overlayView.removeFromSuperview()
+            DispatchQueue.main.async {
+                self.overlayView.removeFromSuperview()
+            }    
         }
     }
     
